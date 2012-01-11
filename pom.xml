@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <artifactId>onebusaway</artifactId>
+    <groupId>org.onebusaway</groupId>
+    <version>1.1.4-SNAPSHOT</version>
+    <relativePath>../onebusaway</relativePath>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>onebusaway-jmapprojlib</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+
+  <name>onebusaway-jmapprojlib</name>
+  <description>Branch of jmapprojlib that adds Datum conversion support</description>
+
+  <repositories>
+    <repository>
+      <id>public.onebusaway.org</id>
+      <url>http://nexus.onebusaway.org/content/groups/public/</url>
+    </repository>
+  </repositories>
+
+  <scm>
+    <connection>scm:svn:http://onebusaway.googlecode.com/svn/modules/onebusaway-jmapprojlib/trunk</connection>
+    <developerConnection>scm:svn:https://onebusaway.googlecode.com/svn/modules/onebusaway-jmapprojlib/trunk</developerConnection>
+    <url>http://code.google.com/p/onebusaway/source/browse/#svn/svn/onebusaway-jmapprojlib/trunk</url>
+  </scm>
+
+  <distributionManagement>
+    <!-- Even though we specify this in the parent pom, we need to specify it here to have full control over the url -->
+    <site>
+      <id>${site_id}</id>
+      <url>${site_url}</url>
+    </site>
+  </distributionManagement>
+
+</project>
