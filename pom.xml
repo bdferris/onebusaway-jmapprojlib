@@ -12,7 +12,7 @@
 
   <name>onebusaway-jmapprojlib</name>
   <description>Branch of jmapprojlib that adds Datum conversion support</description>
-  <url>https://github.com/OneBusAway/onebusaway-jmapprojlib/wiki/</url>
+  <url>https://github.com/bdferris/onebusaway-jmapprojlib/wiki/</url>
 
   <repositories>
     <repository>
@@ -22,14 +22,14 @@
   </repositories>
 
   <scm>
-    <connection>scm:git:http://github.com/OneBusAway/onebusaway-jmapprojlib.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/OneBusAway/onebusaway-jmapprojlib.git</developerConnection>
-    <url>http://github.com/OneBusAway/onebusaway-jmapprojlib</url>
+    <connection>scm:git:http://github.com/bdferris/onebusaway-jmapprojlib.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/bdferris/onebusaway-jmapprojlib.git</developerConnection>
+    <url>http://github.com/bdferris/onebusaway-jmapprojlib</url>
   </scm>
 
   <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/OneBusAway/onebusaway-jmapprojlib/issues</url>
+    <url>https://github.com/bdferris/onebusaway-jmapprojlib/issues</url>
   </issueManagement>
 
   <distributionManagement>
