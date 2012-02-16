@@ -4,7 +4,7 @@ http://sourceforge.net/projects/jmapprojlib/
 
 maintained by Bernhard Jenny.  This branch adds the following features:
 
-1) Mavenize the build for easier packing and dependcy management by other
+1) Mavenize the build for easier packaging and dependency management by other
    projects.
 2) Add datum conversion support and a "latlong" projection similar to PROJ.4.
 
