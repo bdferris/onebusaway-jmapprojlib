@@ -83,7 +83,7 @@ public class CoordinateSystemToCoordinateSystem {
       /*
        * Latitude out of range
        */
-      throw new IllegalStateException();
+      throw new ProjectionException("latitude is out of range " + lat);
     }
 
     if (lon > Math.PI) {
