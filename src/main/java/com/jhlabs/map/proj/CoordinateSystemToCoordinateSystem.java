@@ -51,8 +51,10 @@ public class CoordinateSystemToCoordinateSystem {
     Point3D p3 = new Point3D();
     ConvertGeodeticToGeocentric(src_a, src_es, from, p3);
     GeocentricToWgs84(fromProjection.ellipsoid, p3);
+    GeocentricFromWgs84(toProjection.ellipsoid, p3);
     ConvertGeocentricToGeodeticIterative(dst_a, dst_es, p3, to);
   }
+
 
   /**
    * Converts geodetic coordinates (latitude, longitude) to geocentric
@@ -116,6 +118,25 @@ public class CoordinateSystemToCoordinateSystem {
       point.x = params[6] * (x - params[5] * y + params[4] * z) + params[0];
       point.y = params[6] * (params[5] * x + y - params[3] * z) + params[1];
       point.z = params[6] * (-params[4] * x + params[3] * y + z) + params[2];
+    }
+  }
+  
+  private static void GeocentricFromWgs84(Ellipsoid ellipsoid, Point3D point) {
+    double[] params = ellipsoid.datumParams;
+    if (params == null) {
+      return;
+    }
+    if (params.length == 3) {
+      point.x -= params[0];
+      point.y -= params[1];
+      point.z -= params[2];    
+    } else if (params.length == 7) {  
+      double x = (point.x - params[0]) / params[6];
+      double y = (point.y - params[1]) / params[6];
+      double z = (point.z - params[2]) / params[6];
+      point.x = x + params[5] * y - params[4] * z;
+      point.y = -params[5] *x + y + params[3] * z;
+      point.z = params[4] * x - params[3] *y + z;
     }
   }
 
